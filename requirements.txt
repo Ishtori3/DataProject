@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-matplotlib.pyplot
+matplotlib
 streamlit
 statsmodels.tsa.statespace.sarimax
 pmdarima.arima
