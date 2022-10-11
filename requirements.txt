@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+matplotlib.pyplot
+streamlit
+statsmodels.tsa.statespace.sarimax
+pmdarima.arima
+sklearn.metrics
+dateutil.relativedelta
+prophet
