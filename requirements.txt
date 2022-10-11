@@ -4,7 +4,7 @@ numpy
 matplotlib
 streamlit
 statsmodels
-pmdarima.arima
+pmdarima
 sklearn.metrics
 dateutil.relativedelta
 prophet
