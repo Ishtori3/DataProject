@@ -6,5 +6,5 @@ streamlit
 statsmodels
 pmdarima
 sklearn
-dateutil.relativedelta
+dateutil
 prophet
