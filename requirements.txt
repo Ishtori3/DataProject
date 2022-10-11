@@ -3,7 +3,7 @@ pandas
 numpy
 matplotlib
 streamlit
-statsmodels.tsa
+statsmodels
 pmdarima.arima
 sklearn.metrics
 dateutil.relativedelta
