@@ -100,13 +100,13 @@ elif page==pages[2]:
             
   #Représentation graphique des data et prédictions
         fig = prophet_model.plot(predictions) 
-        ax = fig.add_subplot(111)
-        ax.set_xlabel("")
-        ax.set_ylabel("Puissance en MW")
+       # ax = fig.add_subplot(111)
+       # ax.set_xlabel("")
+       # ax.set_ylabel("Puissance en MW")
         fig.set_size_inches(30, 10)
-        ax.set_title("Prédictions pour 2020/2023 en région " + str(region), weight="bold", fontsize=16)
-       # plt.plot(df[df["Région"]==region].resample("D").mean().Consommation["2022"], color="red", label="Données réelles", ax=ax) 
-        ax.legend(loc="upper right")
+      #  ax.set_title("Prédictions pour 2022 en région " + str(region), weight="bold", fontsize=16)
+       # ax.plot(df[df["Région"]==region].resample("D").mean().Consommation["2022"], color="red", label="Données réelles", ax=ax) 
+       # ax.legend(loc="upper right")
 
         st.pyplot(fig)
         
