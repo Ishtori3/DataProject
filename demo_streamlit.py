@@ -91,7 +91,7 @@ elif page==pages[2]:
     region = st.selectbox(label = "Choix de la région", options=["Île-de-France","Centre-Val de Loire","Bourgogne-Franche-Comté", "Normandie", "Hauts-de-France","Grand Est","Pays de la Loire","Bretagne", "Nouvelle-Aquitaine","Occitanie","Auvergne-Rhône-Alpes","Provence-Alpes-Côte d'Azur"])
 
     st.write("Les données d'entraînement correspondent aux données 2020-2021 (voir les dots sur le graphique), les prédictions sont ensuite réalisées pour l'ensemble de l'année 2022.")
-    st.write("(Pour une raison inconnue, toutes les améliorations apportées au graphique (nom des axes, légende, etc...) n'ont pas fonctionné lors du déploiement en ligne alors qu'elles fonctionnaient en local. A  noter donc que les points en noir représentent les données d'observations, la ligne en bleu, les prédictions selon PRophet, avec en bleu clair l'intervalle de confiance.)")
+    st.write("(Pour une raison inconnue, toutes les améliorations apportées au graphique (nom des axes, légende, etc...) n'ont pas fonctionné lors du déploiement en ligne alors qu'elles fonctionnaient en local. A  noter donc que les points en noir représentent les données d'observations, la ligne en bleu, les prédictions selon Prophet, avec en bleu clair l'intervalle de confiance.)")
     def prophet_day(region):
         train_data=df[df["Région"]==region]["Consommation"]["2020":"2021"].resample("D").mean().reset_index().rename(columns={"Date" : "ds", "Consommation" : "y"})
         prophet_model = Prophet(yearly_seasonality=True).fit(train_data)
@@ -107,7 +107,7 @@ elif page==pages[2]:
         
         fig.suptitle("Prédictions pour 2022 en région " + str(region), weight="bold", fontsize=16)
        # ax.plot(df[df["Région"]==region].resample("D").mean().Consommation["2022"], color="red", label="Données réelles", ax=ax) 
-       # ax.legend(loc="upper right")
+        plt.legend(loc="upper right")
 
         st.pyplot(fig)
         
