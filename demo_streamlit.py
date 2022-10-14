@@ -99,8 +99,8 @@ elif page==pages[2]:
         predictions=prophet_model.predict(futur)
             
   #Représentation graphique des data et prédictions
-        fig = prophet_model.plot(predictions) 
-        ax = fig.add_subplot(111)
+        fig, ax = prophet_model.plot(predictions) 
+        #ax = fig.add_subplot(111)
         ax.set_xlabel("")
         ax.set_ylabel("Puissance en MW")
         fig.set_size_inches(30, 10)
